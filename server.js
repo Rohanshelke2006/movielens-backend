@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 3000;
 // Protects your server by allowing your frontend to safely talk to it
 app.use(cors());
 
-// YOUR HIDDEN API KEY (Safe here because users can't see backend files)
-const HIDDEN_API_KEY = 'cfbf2e26010e31d54aefb040ed817236';
+// The server will look at the Render Environment Variables to grab this key automatically!
+const HIDDEN_API_KEY = process.env.TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 // The Proxy Gateway
